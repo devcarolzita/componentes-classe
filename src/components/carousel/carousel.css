@@ -1,0 +1,49 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 80vh; 
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .carousel {
+      padding-bottom: 56.25%;
+      height: auto;
+  }
+}
+
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 48px;
+  color: #ffffff;
+  transition: color 0.3s;
+  z-index: 1; /* Certifique-se de que o botão esteja acima da imagem */
+}
+
+.carousel-button:hover {
+  color: #aaaaaa;
+}
+
+.carousel-button-left {
+  left: 10px;
+}
+
+.carousel-button-right {
+  right: 10px;
+}
