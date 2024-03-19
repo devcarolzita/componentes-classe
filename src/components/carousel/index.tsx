@@ -38,7 +38,10 @@ class Carousel extends React.Component<CarouselProps, CarouselState> {
 
   componentDidUpdate(prevProps: CarouselProps) {
     console.log('Componente foi atualizado!');
-
+    const { category } = this.props;
+    if(prevProps.category !== category) {
+      this.getImages();
+    }
    
   }
 
